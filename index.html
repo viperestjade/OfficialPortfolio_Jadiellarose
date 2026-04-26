@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jade | Computer Science Student</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- =============================================
+     NAVIGATION
+============================================= -->
+<nav>
+  <a href="#home" class="nav-logo">
+    <img src="assets/logo.png" alt="Logo">
+  </a>
+
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <span class="theme-toggle-thumb" id="themeIcon">☀</span>
+  </button>
+
+  <div class="nav-spacer"></div>
+
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+
+  <button class="hamburger" id="hamburger" aria-label="Open menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+
+<!-- =============================================
+     HERO / HOME SECTION
+============================================= -->
+<section id="home">
+  <div class="hero-inner">
+
+    <div class="hero-photo-wrap reveal">
+      <img
+        class="hero-photo"
+        src="assets/jade-photo.png"
+        alt="Jade — Computer Science Student"
+        onerror="this.style.background='var(--warm)'; this.removeAttribute('src');"
+      />
+    </div>
+
+    <div class="hero-text reveal reveal-delay-1">
+      <p class="hero-greeting">Hello, my name is</p>
+      <h1 class="hero-name">Rosella Jade</h1>
+      <p class="hero-subtitle">A Computer Science Student</p>
+      <p class="hero-subtitle2" style="margin-top:-18px;">
+        UI/UX Designer <span>|</span>
+        Graphic Designer <span>|</span><br>
+        Software Developer <span>|</span>
+        Video &amp; Image Editor
+      </p>
+
+      <div class="hero-cta">
+        <button class="btn btn-primary" id="resumeBtn">
+          <i class="fa-regular fa-file-lines"></i> Resume
+        </button>
+        <a
+          href="https://your-cover-letter-link-here.com"
+          class="btn btn-outline"
+          target="_blank"
+          rel="noopener noreferrer"
+          id="coverLetterBtn"
+        >
+          <i class="fa-regular fa-envelope-open"></i> Cover Letter
+        </a>
+      </div>
+
+      <div class="hero-socials">
+        <a href="https://www.facebook.com/Jade.Ricafort6/" class="social-icon" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/in/rosella-jade-asetre-ricafort-169676296/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://instagram.com/jadiellarose" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.tiktok.com/@strikersmileyjade" class="social-icon" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        <a href="https://discord.com/users/viperjaderose" class="social-icon" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+        <a href="https://github.com/viperestjade" class="social-icon" target="_blank" rel="noopener" aria-label="Github"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     MY BACKGROUND SECTION
+============================================= -->
+<section id="mybackground">
+  <div class="section-inner">
+    <h2 class="section-title reveal">My Background</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="background-grid">
+      <div class="bg-card reveal reveal-delay-1">
+        <div class="bg-card-icon"><img src="assets/uiux.png" alt="UI/UX Icon"></div>
+        <h3>UI/UX Designer<br />&amp; Graphic Designer</h3>
+        <p>A UI/UX designer who combines clean and user-friendly digital experiences, focusing on branding, logos, and visual content. I create everything from mockups to graphics and social media visuals with a unique digital style.</p>
+      </div>
+      <div class="bg-card reveal reveal-delay-2">
+        <div class="bg-card-icon"><img src="assets/sd.png" alt="Developer Icon"></div>
+        <h3>Software Developer</h3>
+        <p>A software developer who builds websites, applications, and tools that solve real problems. I write clean code for both the front-end and back-end, balancing functionality and performance.</p>
+      </div>
+      <div class="bg-card reveal reveal-delay-3">
+        <div class="bg-card-icon"><img src="assets/ive.png" alt="Video Editor Icon"></div>
+        <h3>Image &amp; Video Editor</h3>
+        <p>A media editor who brings stories to life by routing and arranging visuals, adjusting colors, lighting, and details to create visually appealing results.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     WHY HIRE ME SECTION
+============================================= -->
+<section id="why">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Why Hire Me For Your Next Project?</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="why-layout">
+      <div class="why-text reveal">
+        <p>I bring a combination of <strong>creativity and technical skills</strong> to every project I work on. As someone experienced in UI/UX design, graphic design, software development, and video editing, I can handle different aspects of a project with consistency and quality.</p>
+        <p>I focus on creating designs and solutions that are not only <strong>visually appealing but also functional and user-friendly</strong>. I am detail-oriented, organized, and committed to meeting deadlines, ensuring that every project is completed efficiently.</p>
+        <p>I am also open to feedback and continuously improving, which helps me deliver results that <strong>match your vision</strong>.</p>
+        <div class="skills-list">
+          <span class="skill-chip">Figma</span>
+          <span class="skill-chip">HTML/CSS</span>
+          <span class="skill-chip">JavaScript</span>
+          <span class="skill-chip">Canva</span>
+          <span class="skill-chip">Flutter</span>
+          <span class="skill-chip">Dart</span>
+          <span class="skill-chip">C++</span>
+          <span class="skill-chip">GameMaker Language</span>
+          <span class="skill-chip">Python</span>
+        </div>
+      </div>
+      <div class="why-mascot reveal reveal-delay-1">
+        <div class="mascot-img">🐱</div>
+        <p class="mascot-quote">"Let's build something amazing together!"</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     ABOUT ME SECTION
+============================================= -->
+<section id="about">
+  <div class="about-hero-inner">
+
+    <div class="about-photo-wrap reveal">
+      <img
+        class="about-photo"
+        src="assets/jade-about-photo.png"
+        alt="Rosella Jade Asetre Ricafort"
+        onerror="this.style.background='var(--warm)'; this.removeAttribute('src');"
+      />
+    </div>
+
+    <div class="about-text reveal reveal-delay-1">
+      <h2 class="about-heading">About Me</h2>
+
+      <p class="about-body">
+        My name is <strong>Rosella Jade Asetre Ricafort</strong>, a 3rd Year Computer
+        Science student at Ateneo de Naga University. My last position is the
+        Public Information Officer of the Student Government, Liderato kan Nueva Atenista.
+      </p>
+      <p class="about-body">
+        I enjoy building, creating, and designing software, whether it's games,
+        applications, or websites. I began exploring these concepts during my
+        first year in college, and since then, I've realized that this is the
+        path I truly want to pursue.
+      </p>
+      <p class="about-body">
+        In my free time, I enjoy playing games like Mobile Legends, watching
+        TikToks, anime, movies, and series, going to the gym, and studying my
+        subjects, especially coding and design.
+      </p>
+
+      <div class="shortcuts-bar">
+        <button class="shortcut-btn" data-target="education"><i class="fa-solid fa-graduation-cap"></i><span>Education</span></button>
+        <button class="shortcut-btn" data-target="skills"><i class="fa-solid fa-code"></i><span>Skills</span></button>
+        <button class="shortcut-btn" data-target="experiences"><i class="fa-solid fa-briefcase"></i><span>Experiences</span></button>
+        <button class="shortcut-btn" data-target="projects"><i class="fa-solid fa-folder-open"></i><span>Projects</span></button>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     EDUCATION SECTION
+============================================= -->
+<section id="education">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Education</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="edu-grid">
+      <div class="edu-card reveal reveal-delay-1">
+        <div class="edu-card-img-wrap">
+          <img src="assets/edu-spa.png" alt="St. Paul Academy of Goa" class="edu-card-img" onerror="this.style.display='none'" />
+        </div>
+        <div class="edu-card-body">
+          <h3 class="edu-school">St. Paul Academy of Goa <span class="edu-year">(2017–2021)</span></h3>
+          <p class="edu-level">Junior Highschool</p>
+          <ul class="edu-achievements">
+            <li>Honor Student (2017–2021)</li>
+            <li>7th Place in Math on Private Schools' Day (2020)</li>
+            <li>Social Service Award (2019)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="edu-card reveal reveal-delay-2">
+        <div class="edu-card-img-wrap">
+          <img src="assets/edu-adnu.png" alt="Ateneo de Naga University" class="edu-card-img" onerror="this.style.display='none'" />
+        </div>
+        <div class="edu-card-body">
+          <h3 class="edu-school">Ateneo de Naga University <span class="edu-year">(2021–Present)</span></h3>
+          <p class="edu-level">Senior Highschool – College</p>
+          <p class="edu-strand">Science, Technology, Engineering, and Mathematics Strand</p>
+          <p class="edu-level" style="margin-top: 14px;">College</p>
+          <p class="edu-course">Currently taking the course <strong>Computer Science</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     SKILLS & TECHNOLOGIES SECTION
+============================================= -->
+<section id="skills">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Skills &amp; Technologies</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="skills-grid">
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon-wrap">
+          <img class="skill-card-icon active" src="assets/applogo/icon-figma.png" alt="Figma" />
+          <img class="skill-card-icon" src="assets/applogo/icon-canva.png" alt="Canva" />
+          <img class="skill-card-icon" src="assets/applogo/icon-picsart.png" alt="Picsart" />
+          <img class="skill-card-icon" src="assets/applogo/icon-mockup.png" alt="Mockup" />
+        </div>
+        <p class="skill-card-name">UI/UX Design</p>
+        <p class="skill-card-tools">Figma · Canva · Picsart · Mockup</p>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon-wrap">
+          <img class="skill-card-icon active" src="assets/applogo/icon-canva.png" alt="Canva" />
+          <img class="skill-card-icon" src="assets/applogo/icon-picsart.png" alt="Picsart" />
+        </div>
+        <p class="skill-card-name">Graphic Design</p>
+        <p class="skill-card-tools">Canva · Picsart · Mockup</p>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon-wrap">
+          <img class="skill-card-icon active" src="assets/applogo/icon-vscode.png" alt="VSCode" />
+          <img class="skill-card-icon" src="assets/applogo/icon-github.png" alt="GitHub" />
+          <img class="skill-card-icon" src="assets/applogo/icon-rstudio.png" alt="RStudio" />
+        </div>
+        <p class="skill-card-name">Programming Tools</p>
+        <p class="skill-card-tools">VS Code · GitHub · RStudio</p>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon-wrap">
+          <img class="skill-card-icon active" src="assets/applogo/icon-c++.png" alt="C++" />
+          <img class="skill-card-icon" src="assets/applogo/icon-java.png" alt="Java" />
+          <img class="skill-card-icon" src="assets/applogo/icon-python.png" alt="Python" />
+        </div>
+        <p class="skill-card-name">Programming Languages</p>
+        <p class="skill-card-tools">C++ · Java · Python</p>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon-wrap">
+          <img class="skill-card-icon active" src="assets/applogo/icon-html.png" alt="HTML" />
+          <img class="skill-card-icon" src="assets/applogo/icon-css.png" alt="CSS" />
+          <img class="skill-card-icon" src="assets/applogo/icon-js.png" alt="JS" />
+          <img class="skill-card-icon" src="assets/applogo/icon-django.png" alt="Django" />
+        </div>
+        <p class="skill-card-name">Web Development</p>
+        <p class="skill-card-tools">HTML · CSS · JavaScript · Django</p>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon-wrap">
+          <img class="skill-card-icon active" src="assets/applogo/icon-flutter.png" alt="Flutter" />
+          <img class="skill-card-icon" src="assets/applogo/icon-dart.png" alt="Dart" />
+          <img class="skill-card-icon" src="assets/applogo/icon-androidstudio.png" alt="AndroidStudio" />
+        </div>
+        <p class="skill-card-name">App Development</p>
+        <p class="skill-card-tools">Flutter · Dart · Android Studio</p>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon-wrap">
+          <img class="skill-card-icon active" src="assets/applogo/icon-gamemaker.png" alt="GameMaker" />
+        </div>
+        <p class="skill-card-name">Game Development</p>
+        <p class="skill-card-tools">GameMaker Studio · GML</p>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-2">
+        <div class="skill-card-icon-wrap">
+          <img class="skill-card-icon active" src="assets/applogo/icon-picsart.png" alt="Picsart" />
+          <img class="skill-card-icon" src="assets/applogo/icon-snapseed.png" alt="Snapseed" />
+          <img class="skill-card-icon" src="assets/applogo/icon-lightroom.png" alt="Lightroom" />
+        </div>
+        <p class="skill-card-name">Image Editing</p>
+        <p class="skill-card-tools">Picsart · Snapseed · Lightroom</p>
+      </div>
+
+      <div class="skill-card reveal reveal-delay-1">
+        <div class="skill-card-icon-wrap">
+          <img class="skill-card-icon active" src="assets/applogo/icon-capcut.png" alt="Capcut" />
+          <img class="skill-card-icon" src="assets/applogo/icon-filmora.png" alt="Filmora" />
+        </div>
+        <p class="skill-card-name">Video Editing</p>
+        <p class="skill-card-tools">CapCut · Filmora · Alightmotion</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     EXPERIENCES SECTION
+============================================= -->
+<section id="experiences">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Experiences</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="exp-block reveal">
+      <h3 class="exp-subtitle"><strong>Organizations &amp; Affiliations</strong></h3>
+      <ul class="exp-list">
+        <li>Class President, St. Paul Academy of Goa (2017–2018)</li>
+        <li>Representative Officer, TACTICS, Ateneo de Naga University (2023–2024)</li>
+        <li>Varsity Member, Golden Galiants, Ateneo de Naga University (2023–Present)</li>
+        <li>Member, ADNU MAGIS TBI, Ateneo de Naga University (2023)</li>
+        <li>Member &amp; Volunteer, Notion of ADNU (2025–Present)</li>
+        <li>Volunteer, NoTact 2025, Ateneo de Naga University (2025)</li>
+        <li>Organizer, Quantum Computing and Blockchain Hackathon, Ateneo de Naga University (2025)</li>
+        <li>Apprentice, Ateneo Film Society, Ateneo de Naga University (2023–2025)</li>
+        <li>Member, B.I.T.S. TACTICS Creatives, Ateneo de Naga University (2024–Present)</li>
+        <li>Team Manager, TACTICS – Liderato kan Nueva Atenista (2024–Present)</li>
+        <li>Member, CS GUILD, Ateneo de Naga University (2025–Present)</li>
+        <li>Public Information Officer, Liderato kan Nueva Atenista (2025–Present)</li>
+        <li>Exports Head Committee, ADNLS3 Intramurals (2025)</li>
+      </ul>
+
+      <div class="exp-gallery-wrap">
+        <div class="exp-gallery-track">
+          <div class="exp-gallery-card"><img src="assets/org/org1.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org2.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org3.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org4.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org5.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org6.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org7.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org8.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org9.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org10.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org11.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org12.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org13.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org14.png" alt="" class="gallery-card-img" /></div>
+          <!-- duplicate for seamless loop -->
+          <div class="exp-gallery-card"><img src="assets/org/org1.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org2.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org3.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org4.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org5.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org6.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org7.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org8.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org9.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org10.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org11.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org12.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org13.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/org/org14.png" alt="" class="gallery-card-img" /></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-block reveal reveal-delay-1">
+      <h3 class="exp-subtitle">Events &amp; Participation</h3>
+      <ul class="exp-list">
+        <li>Work Immersion: College of Computer Studies, Ateneo de Naga University (2023)</li>
+        <li>Participant, PyCon APAC, ADNU (2025)</li>
+        <li>Participant, Bicol IT Student Congress, Camarines Norte State College (2024)</li>
+        <li>Participant, Bicol Beach Summit – BEECAL (2025)</li>
+        <li>Participant, Idea2StartUp, DiH (2023)</li>
+        <li>Participant, Bicol IT Conference, Legazpi City Expo Center (2024)</li>
+        <li>Participant, University Capture the Flag Online Competition, Trend Micro (2024)</li>
+        <li>Participant, TICTACTALKS, LAAD Festival, ADNU (2023)</li>
+        <li>Participant, Student Leader's Retreat, ADNU (2024)</li>
+        <li>Participant, ICTC Skill Up – UI/UX Web Design and Design Systems, ADNU (2025)</li>
+        <li>Participant, Triple A Software Festival, Ateneo Arts &amp; Algorithm Festival (2025)</li>
+        <li>Participant, TACTICS Cybersecurity Seminar, ADNU (2026)</li>
+        <li>Participant, Bytecamp V: Fetching Errors, Bicol University (2026)</li>
+        <li>Participant, PythonAsia, De La Salle University, Manila (2026)</li>
+      </ul>
+
+      <div class="exp-gallery-wrap">
+        <div class="exp-gallery-track">
+          <div class="exp-gallery-card"><img src="assets/events/event1.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event2.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event3.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event4.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event5.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event6.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event7.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event8.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event9.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event10.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event11.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event12.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event13.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event14.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event15.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event16.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event17.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event18.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event19.png" alt="" class="gallery-card-img" /></div>
+          <!-- duplicate for seamless loop -->
+          <div class="exp-gallery-card"><img src="assets/events/event1.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event2.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event3.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event4.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event5.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event6.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event7.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event8.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event9.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event10.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event11.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event12.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event13.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event14.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event15.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event16.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event17.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event18.png" alt="" class="gallery-card-img" /></div>
+          <div class="exp-gallery-card"><img src="assets/events/event19.png" alt="" class="gallery-card-img" /></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     PROJECTS SECTION
+============================================= -->
+<section id="projects">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Projects</h2>
+    <div class="section-divider reveal"></div>
+
+    <h3 class="projects-category reveal">Webpage Designs (Collaboration)</h3>
+    <div class="projects-list">
+      <div class="project-card reveal reveal-delay-1" style="cursor:pointer" onclick="openProject('reelchoice')" data-banner="assets/proj/reelchoice.png">
+        <div class="project-card-logo">
+          <img class="logo-mobile" src="assets/proj/reelchoice-logo.png" alt="ReelChoice" onerror="this.style.display='none'" />
+          <img class="logo-desktop" src="assets/proj/reelchoice-wd.png" alt="ReelChoice" onerror="this.style.display='none'" />
+        </div>
+        <div class="project-card-body">
+        <h4 class="project-name">ReelChoice</h4>
+          <p class="project-desc">ReelChoice is a smart platform designed to simplify movie and TV show selection by recommending content based on user preferences, mood, and trusted ratings helping viewers avoid decision fatigue and save time.</p>
+          <a href="https://canva.link/vhs3eculan331vq" class="project-link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Presentation
+        </a>
+      </div>
+      </div>
+      <div class="project-card reveal reveal-delay-2" style="cursor:pointer" onclick="openProject('adnu-dekusu')" data-banner="assets/proj/dekusu.png">
+        <div class="project-card-logo">
+          <img class="logo-mobile" src="assets/proj/dekusu-logo.png" alt="ADNU Dekusu" onerror="this.style.display='none'" />
+          <img class="logo-desktop" src="assets/proj/dekusu-wd.png" alt="ADNU Dekusu" onerror="this.style.display='none'" />
+        </div>
+        <div class="project-card-body">
+          <h4 class="project-name">ADNU Dekusu</h4>
+          <p class="project-desc">A centralized platform that improves campus navigation, communication, and access to information through an interactive map, reachable contacts, real-time updates, and organized FAQs.</p>
+          <a href="https://canva.link/efp6smgg2cb75yu" class="project-link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Presentation
+          </a>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-3" style="cursor:pointer" onclick="openProject('pinmart')" data-banner="assets/proj/pinmart.png">
+        <div class="project-card-logo">
+          <img class="logo-mobile" src="assets/proj/pinmart-logo.png" alt="PinMart" onerror="this.style.display='none'" />
+          <img class="logo-desktop" src="assets/proj/pinmart-wd.png" alt="PinMart" onerror="this.style.display='none'" />
+        </div>
+        <div class="project-card-body">
+          <h4 class="project-name">PinMart</h4>
+          <p class="project-desc">PinMart is a platform where users discover, save, and shop furniture inspiration. It allows users to bookmark photos and videos into personalized collections for future reference. With its marketplace features, users can easily turn ideas into actual purchases.</p>
+          <a href="https://canva.link/v9t5zss8aq5mekl" class="project-link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Presentation
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="projects-category reveal">Application Design (Collaboration)</h3>
+    <div class="projects-list">
+      <div class="project-card reveal reveal-delay-1" style="cursor:pointer" onclick="openProject('explorific')" data-banner="assets/proj/explorific.png">
+        <div class="project-card-logo">
+          <img class="logo-mobile" src="assets/proj/explorific-logo.png" alt="Explorific" onerror="this.style.display='none'" />
+          <img class="logo-desktop" src="assets/proj/explorific-wd.png" alt="Explorific" onerror="this.style.display='none'" />
+        </div>
+        <div class="project-card-body">
+          <h4 class="project-name">Explorific</h4>
+          <p class="project-desc">Explorific is a smart travel guide for Naga City, helping users discover the best places to eat, drink, and relax through an interactive map, GPS navigation, and filtered searches by category, ratings, and amenities.</p>
+          <a href="https://canva.link/mt54wl5ra127hki" class="project-link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Project Presentation
+          </a>
+        </div>
+      </div>
+      <div class="project-card reveal reveal-delay-2" style="cursor:pointer" onclick="openProject('emotion-diary')" data-banner="assets/proj/emotiondiary.png">
+        <div class="project-card-logo">
+          <img class="logo-mobile" src="assets/proj/emotiondiary-logo.png" alt="Emotion Diary" onerror="this.style.display='none'" />
+          <img class="logo-desktop" src="assets/proj/emotiondiary-wd.png" alt="Emotion Diary" onerror="this.style.display='none'" />
+        </div>
+        <div class="project-card-body">
+          <h4 class="project-name">Emotion Diary</h4>
+          <p class="project-desc">Emotion Diary is a mood-tracking app that helps users monitor their emotional well-being. It lets users select emotions and add short personal messages. It also includes a History View allowing users to review past entries, track patterns, and reflect on their experiences over time.</p>
+          <a href="https://www.figma.com/design/lcmtFOlbQIP1E3n2sak60v/DailyMoodApp_Group4?node-id=0-1&t=EwC1P9FOp2PbfE3L-1" class="project-link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Figma Design
+          </a>
+  
+        </div>
+      </div>
+    </div>
+
+    <h3 class="projects-category reveal">StartUp Design (Solo)</h3>
+    <div class="projects-list">
+      <div class="project-card reveal reveal-delay-1" style="cursor:pointer" onclick="openProject('stray')" data-banner="assets/proj/stray.png">
+        <div class="project-card-logo">
+          <img class="logo-mobile" src="assets/proj/stray-logo.png" alt="Stray" onerror="this.style.display='none'" />
+          <img class="logo-desktop" src="assets/proj/stray-wd.png" alt="Stray" onerror="this.style.display='none'" />
+        </div>
+        <div class="project-card-body">
+          <h4 class="project-name">STRAY</h4>
+          <p class="project-desc">STRAY is a web and app platform dedicated to rescuing, treating, and rehoming stray animals, building a better future for animals and communities.</p>
+          <a href="https://canva.link/518gb3fa5p3v6hh" class="project-link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Branding
+          </a>
+          <a href="https://canva.link/3mbeo6dyzguyeso" class="project-link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Presenatation
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="projects-category reveal">Game Development Design (Collaboration)</h3>
+    <div class="projects-list">
+      <div class="project-card reveal reveal-delay-1" style="cursor:pointer" onclick="openProject('echoes')" data-banner="assets/proj/echoesofhope.png">
+        <div class="project-card-logo">
+          <img class="logo-mobile" src="assets/proj/echoesofhope-logo.png" alt="Echoes of Hope" onerror="this.style.display='none'" />
+          <img class="logo-desktop" src="assets/proj/echoesofhope-wd.png" alt="Echoes of Hope" onerror="this.style.display='none'" />
+        </div>
+        <div class="project-card-body">
+          <h4 class="project-name">Echoes of Hope</h4>
+          <p class="project-desc">Echoes of Hope is a game where a student must decide how to face a three-day struggle with depression, revealing the power of choices, empathy, and seeking help.</p>
+        <a href="https://canva.link/f26dss3zilih76f" class="project-link" target="_blank" rel="noopener">
+          <i class="fa-solid fa-arrow-up-right-from-square"></i> View Poster
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="coming-soon-wrap reveal">
+      <img src="assets/coming-soon-banner.png" alt="Unreleased Projects — Coming Soon" class="coming-soon-img" onerror="this.style.display='none'" />
+      <div class="coming-soon-fallback">
+        <p class="coming-soon-sub">Unreleased Projects</p>
+        <p class="coming-soon-text">COMING SOON</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECT MODAL -->
+<div class="proj-modal-overlay" id="projModal" onclick="closeProjectModal(event)">
+  <div class="proj-modal-box">
+    <button class="proj-modal-close" onclick="closeProject()">&times;</button>
+    <div class="proj-modal-banner">
+      <img id="projModalBanner" src="" alt="" onerror="this.style.display='none'" />
+    </div>
+    <div class="proj-modal-content">
+      <span class="proj-modal-tag" id="projModalTag"></span>
+      <h2 class="proj-modal-title" id="projModalTitle"></h2>
+      <div class="proj-modal-sections" id="projModalSections"></div>
+    </div>
+  </div>
+</div>
+
+<!-- =============================================
+     CONTACT SECTION
+============================================= -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-wrapper reveal">
+
+      <!-- Main card -->
+      <div class="contact-card">
+
+        <!-- Image -->
+        <div class="contact-image-wrap">
+          <img src="assets/contactphoto.jpg" alt="Rosella Jade" 
+               onerror="this.style.background='var(--peach)'; this.removeAttribute('src');" />
+        </div>
+
+        <!-- Info -->
+        <div class="contact-left">
+          <h2 class="contact-heading">Get in Touch</h2>
+          <p class="contact-subheading">I'd love to hear from you!</p>
+          <p class="contact-body">If you have any inquiries or just want to say hi, feel free to email me or reach out through any of my socials.</p>
+
+          <a href="mailto:ricafortjade@gmail.com" class="contact-email">
+            <i class="fa-regular fa-envelope"></i>
+            ricafortjade@gmail.com
+          </a>
+
+          <a href="tel:+639XXXXXXXXX" class="contact-email">
+            <i class="fa-solid fa-phone"></i>
+            +63 948 488 5953
+          </a>
+
+          <div class="contact-socials-row">
+            <a href="https://www.facebook.com/Jade.Ricafort6/" class="contact-social-icon" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.linkedin.com/in/rosella-jade-asetre-ricafort-169676296/" class="contact-social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://instagram.com/jadiellarose" class="contact-social-icon" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/viperestjade" class="contact-social-icon" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.tiktok.com/@strikersmileyjade" class="contact-social-icon" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://discord.com/users/viperjaderose" class="contact-social-icon" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Know More strip -->
+      <div class="contact-know-more">
+        <div class="contact-know-more-top">
+          <div>
+            <h3>Want to Know More About Me?</h3>
+            <p>Explore my background in design, development, and everything in between.</p>
+          </div>
+          <a href="MAM.html" class="btn-know-more">
+            <i class="fa-solid fa-arrow-right"></i> Know More
+          </a>
+        </div>
+
+        <div class="contact-highlights">
+          <div class="contact-highlight-card">
+            <div class="contact-highlight-icon">🎨</div>
+            <h4>Graphic Design</h4>
+            <p>Branding, logos, social media visuals, and creative content crafted with a unique digital style.</p>
+          </div>
+          <div class="contact-highlight-card">
+            <div class="contact-highlight-icon">✏️</div>
+            <h4>UI/UX Design</h4>
+            <p>Clean, user-friendly interfaces and interactive prototypes built with Figma and user research.</p>
+          </div>
+          <div class="contact-highlight-card">
+            <div class="contact-highlight-icon">💻</div>
+            <h4>Development</h4>
+            <p>Websites, apps, and games built with HTML, CSS, JavaScript, Flutter, Python, and more.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+ 
+<!-- =============================================
+     FOOTER
+============================================= -->
+<footer>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/Jade.Ricafort6/" class="social-icon" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/in/rosella-jade-asetre-ricafort-169676296/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com/jadiellarose" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@strikersmileyjade" class="social-icon" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://discord.com/users/viperjaderose" class="social-icon" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+    <a href="https://github.com/viperestjade" class="social-icon" target="_blank" rel="noopener" aria-label="Github"><i class="fab fa-github"></i></a>
+  </div>
+  <p>
+    Made with <span style="color:var(--peach);">&#9829;</span> by Jadiellarose &nbsp;&middot;&nbsp;
+    &copy; <span id="year"></span> All rights reserved
+  </p>
+</footer>
+ 
+ 
+<!-- DOWNLOAD CONFIRMATION MODAL -->
+<div class="modal-overlay" id="downloadModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal-box">
+    <div class="modal-icon">📄</div>
+    <h2 id="modalTitle">Download Resume?</h2>
+    <p>Would you like to download this file to your device?</p>
+    <div class="modal-actions">
+      <button class="btn btn-ghost" id="modalCancel">Cancel</button>
+      <button class="btn btn-primary" id="modalConfirm">
+        <i class="fa-solid fa-download"></i> Download
+      </button>
+    </div>
+  </div>
+</div>
+ 
+<a id="resumeDownloadLink" href="assets/Rosella Jade Asetre Ricafort - Resume.pdf" download="Jade_Resume.pdf" style="display:none;"></a>
+ 
+<button id="scrollTop" aria-label="Scroll to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+ 
+<script src="script.js"></script>
+</body>
+</html>
+
