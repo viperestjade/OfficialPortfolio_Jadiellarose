@@ -62,88 +62,69 @@ body {
 .reveal-delay-3 { transition-delay: 0.30s; }
 
 /* =============================================
-   NAV
+   NAV 
 ============================================= */
+
 nav {
   position: fixed;
   top: 0; left: 0; right: 0;
   z-index: 999;
-  height: 64px;
-  padding: 0 5%;
+  padding: 10px 5%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap; /* مهم */
+  gap: 10px;
+
   background: rgba(253,246,239,0.92);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);
   border-bottom: 1px solid rgba(196,113,74,0.15);
-  position: fixed;
 }
+
 body.dark nav {
   background: rgba(13,13,13,0.95);
   border-bottom-color: rgba(232,144,90,0.12);
 }
 
-.nav-back {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 600;
-  color: var(--brown);
-  padding: 8px 16px;
-  border-radius: 50px;
-  border: 1.5px solid var(--peach);
-  background: var(--warm);
-  transition: var(--transition);
-}
-.nav-back:hover {
-  background: var(--terra);
-  color: var(--white);
-  border-color: var(--terra);
-  transform: translateX(-2px);
+nav {
+  height: auto;
 }
 
 .nav-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--terra);
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  pointer-events: none;
-  white-space: nowrap;
+  position: static; 
+  transform: none;
+  pointer-events: auto;
 }
+@media (max-width: 768px) {
+  
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-.theme-toggle {
-  background: none;
-  border: 1.5px solid var(--peach);
-  border-radius: 50px;
-  width: 48px; height: 26px;
-  cursor: pointer;
-  position: relative;
-  flex-shrink: 0;
-  transition: var(--transition);
-  padding: 0;
+  .nav-title {
+    text-align: center;
+    margin: 5px 0;
+  }
+
+  .nav-back,
+  .theme-toggle {
+    align-self: flex-start;
+  }
+
+  .search-container {
+    width: 100%;
+  }
+
+  #certSearch {
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
-.theme-toggle-thumb {
-  position: absolute;
-  top: 3px; left: 3px;
-  width: 18px; height: 18px;
-  border-radius: 50%;
-  background: var(--terra);
-  transition: left 0.35s cubic-bezier(0.4,0,0.2,1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 10px;
+* {
+  box-sizing: border-box;
 }
-body.dark .theme-toggle-thumb { left: 25px; }
 
 /* =============================================
    HERO
@@ -744,4 +725,11 @@ body.dark footer { background: #111; }
   .cert-hero-title { letter-spacing: -1px; }
   .cert-stats { flex-wrap: wrap; border-radius: var(--radius); }
   .cert-stat-div { display: none; }
+}
+/* HIDE FILTER CHIPS ON MOBILE */
+@media (max-width: 768px) {
+  .filter-container,
+  .filter-chip {
+    display: none !important;
+  }
 }
