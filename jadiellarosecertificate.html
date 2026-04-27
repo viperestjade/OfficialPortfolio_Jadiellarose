@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Certificates | Jadiellarose</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="jadiellarosecertificate.css" />
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="index.html" class="nav-back">
+    <i class="fa-solid fa-arrow-left"></i>
+    <span>Back to Portfolio</span>
+  </a>
+  <span class="nav-title">
+    <i class="fa-solid fa-certificate"></i> Certificates
+  </span>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <span class="theme-toggle-thumb" id="themeIcon">☀</span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="cert-hero">
+  <div class="hero-blob b1"></div>
+  <div class="hero-blob b2"></div>
+  <div class="cert-hero-inner">
+    <div class="cert-hero-tag reveal">
+      <i class="fa-solid fa-certificate"></i> My Achievements
+    </div>
+    <h1 class="cert-hero-title reveal reveal-delay-1">
+      Certificates &amp;<br><span>Recognitions</span>
+    </h1>
+    <p class="cert-hero-sub reveal reveal-delay-2">
+      A collection of certifications, completions, and recognitions earned through
+      events, courses, and competitions.
+    </p>
+    <div class="cert-stats reveal reveal-delay-3">
+      <div class="cert-stat">
+        <span class="cert-stat-num" id="certCount">0</span>
+        <span class="cert-stat-label">Certificates</span>
+      </div>
+      <div class="cert-stat-div"></div>
+      <div class="cert-stat">
+        <span class="cert-stat-num" id="issuerCount">0</span>
+        <span class="cert-stat-label">Issuers</span>
+      </div>
+      <div class="cert-stat-div"></div>
+      <div class="cert-stat">
+        <span class="cert-stat-num" id="yearCount">0</span>
+        <span class="cert-stat-label">Years Active</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FILTER BAR -->
+<section id="cert-filter">
+  <div class="section-inner">
+    <div class="filter-bar reveal">
+      <span class="filter-label">Filter by:</span>
+      <div class="filter-chips" id="filterChips">
+        <button class="filter-chip active" data-filter="all">All</button>
+        <button class="filter-chip" data-filter="design">Design</button>
+        <button class="filter-chip" data-filter="development">Development</button>
+        <button class="filter-chip" data-filter="event">Events</button>
+        <button class="filter-chip" data-filter="leadership">Leadership</button>
+        <button class="filter-chip" data-filter="other">Other</button>
+      </div>
+      <div class="cert-search-wrap">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" id="certSearch" placeholder="Search certificates…" autocomplete="off" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATES GRID -->
+<section id="certs-grid-section">
+  <div class="section-inner">
+    <div class="certs-grid" id="certsGrid">
+
+      <!-- ── CERTIFICATE CARDS ── -->
+      <!-- Add/edit cards here. data-category must match a filter chip value. -->
+
+      <div class="cert-card reveal reveal-delay-1" data-category="event">
+        <div class="cert-img-wrap" onclick="openLightbox('certs/cert1.png', this)">
+          <img src="certs/cert1.png" alt="Certificate 1"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-category-badge event">Event</span>
+          <h3 class="cert-title">PyCon APAC 2025</h3>
+          <div class="cert-meta">
+            <span><i class="fa-solid fa-building-columns"></i> ADNU</span>
+            <span><i class="fa-regular fa-calendar"></i> 2025</span>
+          </div>
+          <p class="cert-desc">Certificate of participation for attending PyCon APAC hosted at Ateneo de Naga University.</p>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-2" data-category="development">
+        <div class="cert-img-wrap" onclick="openLightbox('certs/cert2.png', this)">
+          <img src="certs/cert2.png" alt="Certificate 2"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-category-badge development">Development</span>
+          <h3 class="cert-title">Bicol IT Student Congress</h3>
+          <div class="cert-meta">
+            <span><i class="fa-solid fa-building-columns"></i> Camarines Norte State College</span>
+            <span><i class="fa-regular fa-calendar"></i> 2024</span>
+          </div>
+          <p class="cert-desc">Participant certificate from the Bicol IT Student Congress held at Camarines Norte State College.</p>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-3" data-category="design">
+        <div class="cert-img-wrap" onclick="openLightbox('certs/cert3.png', this)">
+          <img src="certs/cert3.png" alt="Certificate 3"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-category-badge design">Design</span>
+          <h3 class="cert-title">ICTC Skill Up — UI/UX Design</h3>
+          <div class="cert-meta">
+            <span><i class="fa-solid fa-building-columns"></i> ADNU</span>
+            <span><i class="fa-regular fa-calendar"></i> 2025</span>
+          </div>
+          <p class="cert-desc">Completed the ICTC Skill Up workshop on UI/UX Web Design and Design Systems.</p>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-1" data-category="development">
+        <div class="cert-img-wrap" onclick="openLightbox('certs/cert4.png', this)">
+          <img src="certs/cert4.png" alt="Certificate 4"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-category-badge development">Development</span>
+          <h3 class="cert-title">Bicol IT Conference</h3>
+          <div class="cert-meta">
+            <span><i class="fa-solid fa-building-columns"></i> Legazpi City Expo Center</span>
+            <span><i class="fa-regular fa-calendar"></i> 2024</span>
+          </div>
+          <p class="cert-desc">Certificate of attendance for the Bicol IT Conference at Legazpi City Expo Center.</p>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-2" data-category="development">
+        <div class="cert-img-wrap" onclick="openLightbox('certs/cert5.png', this)">
+          <img src="certs/cert5.png" alt="Certificate 5"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-category-badge development">Development</span>
+          <h3 class="cert-title">Bytecamp V: Fetching Errors</h3>
+          <div class="cert-meta">
+            <span><i class="fa-solid fa-building-columns"></i> Bicol University</span>
+            <span><i class="fa-regular fa-calendar"></i> 2026</span>
+          </div>
+          <p class="cert-desc">Participant certificate from Bytecamp V: Fetching Errors at Bicol University.</p>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-3" data-category="event">
+        <div class="cert-img-wrap" onclick="openLightbox('certs/cert6.png', this)">
+          <img src="certs/cert6.png" alt="Certificate 6"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-category-badge event">Event</span>
+          <h3 class="cert-title">PythonAsia 2026</h3>
+          <div class="cert-meta">
+            <span><i class="fa-solid fa-building-columns"></i> De La Salle University</span>
+            <span><i class="fa-regular fa-calendar"></i> 2026</span>
+          </div>
+          <p class="cert-desc">Certificate of participation for attending PythonAsia at De La Salle University, Manila.</p>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-1" data-category="leadership">
+        <div class="cert-img-wrap" onclick="openLightbox('certs/cert7.png', this)">
+          <img src="certs/cert7.png" alt="Certificate 7"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-category-badge leadership">Leadership</span>
+          <h3 class="cert-title">Student Leader's Retreat</h3>
+          <div class="cert-meta">
+            <span><i class="fa-solid fa-building-columns"></i> ADNU</span>
+            <span><i class="fa-regular fa-calendar"></i> 2024</span>
+          </div>
+          <p class="cert-desc">Certificate of participation for the Student Leader's Retreat at Ateneo de Naga University.</p>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-2" data-category="other">
+        <div class="cert-img-wrap" onclick="openLightbox('certs/cert8.png', this)">
+          <img src="certs/cert8.png" alt="Certificate 8"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-category-badge other">Other</span>
+          <h3 class="cert-title">Bicol Beach Summit — BEECAL</h3>
+          <div class="cert-meta">
+            <span><i class="fa-solid fa-building-columns"></i> BEECAL</span>
+            <span><i class="fa-regular fa-calendar"></i> 2025</span>
+          </div>
+          <p class="cert-desc">Certificate of participation from the Bicol Beach Summit organized by BEECAL.</p>
+        </div>
+      </div>
+
+      <div class="cert-card reveal reveal-delay-3" data-category="development">
+        <div class="cert-img-wrap" onclick="openLightbox('certs/cert9.png', this)">
+          <img src="certs/cert9.png" alt="Certificate 9"
+               onerror="this.parentElement.classList.add('no-img')" />
+          <div class="cert-img-overlay">
+            <i class="fa-solid fa-up-right-and-down-left-from-center"></i>
+          </div>
+        </div>
+        <div class="cert-info">
+          <span class="cert-category-badge development">Development</span>
+          <h3 class="cert-title">Capture the Flag — Trend Micro</h3>
+          <div class="cert-meta">
+            <span><i class="fa-solid fa-building-columns"></i> Trend Micro</span>
+            <span><i class="fa-regular fa-calendar"></i> 2024</span>
+          </div>
+          <p class="cert-desc">Certificate of participation for the University Capture the Flag Online Competition by Trend Micro.</p>
+        </div>
+      </div>
+
+      <!-- Add more cert cards following the same pattern above -->
+
+    </div>
+
+    <!-- Empty state -->
+    <div class="no-results" id="noResults" style="display:none;">
+      <i class="fa-solid fa-box-open"></i>
+      <p>No certificates found.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/Jade.Ricafort6/" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/in/rosella-jade-asetre-ricafort-169676296/" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com/jadiellarose" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+    <a href="https://github.com/viperestjade" class="social-icon" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>
+  </div>
+  <p>Made with <span style="color:var(--peach);">♥</span> by Jadiellarose &nbsp;·&nbsp; © <span id="year"></span> All rights reserved</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox(event)">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+  <div class="lightbox-inner" onclick="event.stopPropagation()">
+    <img id="lightboxImg" src="" alt="Certificate" />
+    <div class="lightbox-info" id="lightboxInfo"></div>
+  </div>
+</div>
+
+<!-- SCROLL TOP -->
+<button id="scrollTop" aria-label="Scroll to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<script src="certificatejadiellarose.js"></script>
+</body>
+</html>
