@@ -107,19 +107,6 @@ body.dark nav {
   transform: translateX(-2px);
 }
 
-.nav-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-family: 'Bricolage Grotesque', sans-serif;
-  font-size: 1rem;
-  font-weight: 700;
-  color: var(--terra);
-  letter-spacing: 0.3px;
-  pointer-events: none;
-  white-space: nowrap;
-}
-
 .theme-toggle {
   background: none;
   border: 1.5px solid var(--peach);
