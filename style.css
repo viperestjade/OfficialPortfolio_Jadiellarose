@@ -407,7 +407,7 @@ section {
   overflow: hidden;
 }
 #why::before {
-  content: '"';
+  content: none;
   position: absolute;
   top: -30px; left: 3%;
   font-family: 'Bricolage Grotesque', sans-serif;
@@ -712,7 +712,7 @@ section {
   overflow: hidden;
 }
 #experiences::before {
-  content: '"';
+  content: none;
   position: absolute;
   top: -20px; right: 2%;
   font-family: 'Bricolage Grotesque', sans-serif;
