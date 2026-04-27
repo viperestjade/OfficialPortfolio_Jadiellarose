@@ -59,10 +59,10 @@ body {
 .reveal-delay-3 { transition-delay: 0.36s; }
 
 /* =============================================
-   NAV
+   NAV — fixed duplicate position:relative removed
 ============================================= */
 nav {
-  position: fixed;
+  position: fixed;           /* ← only declaration; was duplicated with position:relative below */
   top: 0; left: 0; right: 0;
   z-index: 999;
   background: rgba(253, 246, 239, 0.92);
@@ -75,7 +75,6 @@ nav {
   align-items: center;
   justify-content: space-between;
   gap: 14px;
-  position: relative;
 }
 body.dark nav {
   background: rgba(13, 13, 13, 0.95);
@@ -95,6 +94,7 @@ body.dark nav {
   border: 1.5px solid var(--peach);
   background: var(--warm);
   transition: var(--transition);
+  white-space: nowrap;
 }
 .nav-back:hover {
   background: var(--terra);
@@ -509,7 +509,7 @@ section { padding: 100px 5%; }
 }
 
 /* =============================================
-   FUN FACTS
+   FUN FACTS — improved mobile emoji + card layout
 ============================================= */
 #mam-facts {
   background: var(--cream);
@@ -524,11 +524,11 @@ section { padding: 100px 5%; }
 .fact-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 32px 24px;
+  padding: 28px 22px;
   border: 1.5px solid rgba(196, 113, 74, 0.12);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 10px;
   transition: var(--transition);
   position: relative;
   overflow: hidden;
@@ -550,9 +550,15 @@ section { padding: 100px 5%; }
 
 .fact-emoji {
   font-size: 2rem;
+  line-height: 1;
+  display: block;          /* block so it doesn't stretch in flex */
   position: relative;
   z-index: 1;
   transition: transform 0.3s ease;
+  /* Prevent emoji from being clipped or over-sized on mobile */
+  width: 2.4rem;
+  height: 2.4rem;
+  font-style: normal;
 }
 .fact-card:hover .fact-emoji {
   transform: scale(1.2) rotate(-8deg);
@@ -564,6 +570,7 @@ section { padding: 100px 5%; }
   color: var(--dark);
   position: relative;
   z-index: 1;
+  line-height: 1.3;
 }
 .fact-card p {
   font-size: 0.88rem;
@@ -960,21 +967,6 @@ body.dark footer { background: #111; }
 #scrollTop:hover { background: var(--brown); transform: translateY(-3px); }
 
 /* =============================================
-   RESPONSIVE
-============================================= */
-@media (max-width: 700px) {
-  .services-grid { grid-template-columns: 1fr; }
-  .toolkit-grid  { grid-template-columns: 1fr; }
-  .facts-grid    { grid-template-columns: 1fr 1fr; }
-  .mam-hero-title { letter-spacing: -1px; }
-  .modal-top { flex-direction: column; }
-}
-@media (max-width: 480px) {
-  .facts-grid { grid-template-columns: 1fr; }
-  section { padding: 80px 5%; }
-}
-
-/* =============================================
    SAMPLE THUMBNAILS GRID
 ============================================= */
 .samples-label {
@@ -1094,4 +1086,36 @@ body.dark footer { background: #111; }
   background: var(--terra);
   border-color: var(--terra);
   transform: rotate(90deg);
+}
+
+/* =============================================
+   RESPONSIVE
+============================================= */
+@media (max-width: 700px) {
+  .services-grid { grid-template-columns: 1fr; }
+  .toolkit-grid  { grid-template-columns: 1fr; }
+  .mam-hero-title { letter-spacing: -1px; }
+  .modal-top { flex-direction: column; }
+
+  /* Fun facts: single column on small screens so cards have full width */
+  .facts-grid { grid-template-columns: 1fr; }
+
+  /* Nav: shrink back button text on very small screens */
+  .nav-back span { display: none; }
+  .nav-back { padding: 8px 12px; }
+}
+
+@media (max-width: 480px) {
+  section { padding: 80px 5%; }
+
+  /* Slightly larger emoji on mobile so it renders crisply */
+  .fact-emoji { font-size: 1.75rem; }
+  .fact-card  { padding: 22px 18px; }
+}
+
+/* Mid-range: 2-column facts on tablets */
+@media (min-width: 481px) and (max-width: 700px) {
+  .facts-grid { grid-template-columns: 1fr 1fr; }
+  .fact-card  { padding: 22px 16px; }
+  .fact-emoji { font-size: 1.75rem; }
 }
