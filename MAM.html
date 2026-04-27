@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>More About Jade</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="MAM.css" />
+</head>
+<body>
+
+<!-- =============================================
+     NAVIGATION
+============================================= -->
+<nav>
+  <a href="index.html" class="nav-back">
+    <i class="fa-solid fa-arrow-left"></i>
+    <span>Back to Portfolio</span>
+  </a>
+  <span class="nav-title">More About Me</span>
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <span class="theme-toggle-thumb" id="themeIcon">☀</span>
+  </button>
+</nav>
+
+<!-- =============================================
+     HERO
+============================================= -->
+<section id="mam-hero">
+  <div class="hero-bg-blob blob1"></div>
+  <div class="hero-bg-blob blob2"></div>
+  <div class="mam-hero-inner">
+    <div class="mam-hero-tag reveal">✦ Know More About Me</div>
+    <h1 class="mam-hero-title reveal reveal-delay-1">
+      Design. Code.<br><span>Create.</span>
+    </h1>
+    <p class="mam-hero-sub reveal reveal-delay-2">
+      A deep dive into my skills, services, and the work I love doing —
+      from pixels to programs, I bring ideas to life.
+    </p>
+    <div class="mam-hero-scroll reveal reveal-delay-3">
+      <span>Scroll to explore</span>
+      <i class="fa-solid fa-chevron-down bounce"></i>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     SERVICES GRID
+============================================= -->
+<section id="services">
+  <div class="section-inner">
+    <h2 class="section-title reveal">What I Offer</h2>
+    <div class="section-divider reveal"></div>
+    <p class="section-lead reveal">
+      Click any service to get in touch — I'd love to work with you!
+    </p>
+
+    <div class="services-grid">
+
+      <!-- UI/UX Design -->
+      <div class="service-card reveal reveal-delay-1"
+           data-service="UI/UX Design"
+           data-desc="I'll craft clean, intuitive interfaces and interactive prototypes using Figma and user-centered design principles."
+           onclick="openContact(this)">
+        <div class="service-img-wrap">
+          <img src="services/uiux.png" alt="UI/UX Design"
+               onerror="this.parentElement.classList.add('img-fallback')" />
+          <div class="service-img-overlay">
+            <span class="service-cta-hint"><i class="fa-solid fa-hand-pointer"></i> Hire me for this</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>UI/UX Design</h3>
+          <p>User-centered interfaces, wireframes, prototypes, and design systems built in Figma with a focus on clarity and flow.</p>
+          <div class="service-tags">
+            <span>Figma</span><span>Prototyping</span><span>Wireframing</span><span>Design Systems</span>
+          </div>
+        <div class="samples-label"><i class="fa-solid fa-images"></i> Work Samples</div>
+        <div class="samples-grid">
+          <div class="sample-thumb" onclick="openLightbox(event, 'uiux1.png')"><img src="samples/uiux1.png" alt="Sample 1" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'uiux2.png')"><img src="samples/uiux2.png" alt="Sample 2" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'uiux3.png')"><img src="samples/uiux3.png" alt="Sample 3" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Graphic Design -->
+      <div class="service-card reveal reveal-delay-2"
+           data-service="Graphic Design"
+           data-desc="I'll create stunning branding, logos, social media visuals, and creative content tailored to your identity."
+           onclick="openContact(this)">
+        <div class="service-img-wrap">
+          <img src="services/graphicdesign.png" alt="Graphic Design"
+               onerror="this.parentElement.classList.add('img-fallback')" />
+          <div class="service-img-overlay">
+            <span class="service-cta-hint"><i class="fa-solid fa-hand-pointer"></i> Hire me for this</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3>Graphic Design</h3>
+          <p>Branding, logos, social media content, posters, and visual identity design crafted with a distinctive digital style.</p>
+          <div class="service-tags">
+            <span>Canva</span><span>Branding</span><span>Logo Design</span><span>Picsart</span>
+          </div>
+        <div class="samples-label"><i class="fa-solid fa-images"></i> Work Samples</div>
+        <div class="samples-grid">
+          <div class="sample-thumb" onclick="openLightbox(event, 'graphic1.png')"><img src="samples/graphic1.png" alt="Sample 1" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'graphic2.png')"><img src="samples/graphic2.png" alt="Sample 2" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'graphic3.png')"><img src="samples/graphic3.png" alt="Sample 3" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="service-card reveal reveal-delay-3"
+           data-service="Web Development"
+           data-desc="I'll build responsive, well-coded websites and web apps using HTML, CSS, JavaScript, and more."
+           onclick="openContact(this)">
+        <div class="service-img-wrap">
+          <img src="services/webdev.png" alt="Web Development"
+               onerror="this.parentElement.classList.add('img-fallback')" />
+          <div class="service-img-overlay">
+            <span class="service-cta-hint"><i class="fa-solid fa-hand-pointer"></i> Hire me for this</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>Web Development</h3>
+          <p>Responsive websites and web applications built with clean, semantic code — from landing pages to full-stack Django projects.</p>
+          <div class="service-tags">
+            <span>HTML/CSS</span><span>JavaScript</span><span>Django</span><span>Python</span>
+          </div>
+        <div class="samples-label"><i class="fa-solid fa-images"></i> Work Samples</div>
+        <div class="samples-grid">
+          <div class="sample-thumb" onclick="openLightbox(event, 'web1.png')"><img src="samples/web1.png" alt="Sample 1" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'web2.png')"><img src="samples/web2.png" alt="Sample 2" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'web3.png')"><img src="samples/web3.png" alt="Sample 3" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+        </div>
+        </div>
+      </div>
+
+      <!-- App Development -->
+      <div class="service-card reveal reveal-delay-1"
+           data-service="App Development"
+           data-desc="I'll develop cross-platform mobile apps using Flutter and Dart, from concept to deployment on Android."
+           onclick="openContact(this)">
+        <div class="service-img-wrap">
+          <img src="services/appdev.png" alt="App Development"
+               onerror="this.parentElement.classList.add('img-fallback')" />
+          <div class="service-img-overlay">
+            <span class="service-cta-hint"><i class="fa-solid fa-hand-pointer"></i> Hire me for this</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+          <h3>App Development</h3>
+          <p>Cross-platform mobile applications built with Flutter and Dart, designed to be fast, functional, and user-friendly.</p>
+          <div class="service-tags">
+            <span>Flutter</span><span>Dart</span><span>Android Studio</span>
+          </div>
+        <div class="samples-label"><i class="fa-solid fa-images"></i> Work Samples</div>
+        <div class="samples-grid">
+          <div class="sample-thumb" onclick="openLightbox(event, 'app1.png')"><img src="samples/app1.png" alt="Sample 1" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'app2.png')"><img src="samples/app2.png" alt="Sample 2" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'app3.png')"><img src="samples/app3.png" alt="Sample 3" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Game Development -->
+      <div class="service-card reveal reveal-delay-2"
+           data-service="Game Development"
+           data-desc="I'll design and develop 2D games using GameMaker Studio with engaging mechanics and original artwork."
+           onclick="openContact(this)">
+        <div class="service-img-wrap">
+          <img src="services/gamedev.png" alt="Game Development"
+               onerror="this.parentElement.classList.add('img-fallback')" />
+          <div class="service-img-overlay">
+            <span class="service-cta-hint"><i class="fa-solid fa-hand-pointer"></i> Hire me for this</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fa-solid fa-gamepad"></i></div>
+          <h3>Game Development</h3>
+          <p>2D game design and development using GameMaker Studio — from concept and mechanics to sprites and storytelling.</p>
+          <div class="service-tags">
+            <span>GameMaker Studio</span><span>GML</span><span>2D Games</span>
+          </div>
+        <div class="samples-label"><i class="fa-solid fa-images"></i> Work Samples</div>
+        <div class="samples-grid">
+          <div class="sample-thumb" onclick="openLightbox(event, 'game1.png')"><img src="samples/game1.png" alt="Sample 1" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'game2.png')"><img src="samples/game2.png" alt="Sample 2" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'game3.png')"><img src="samples/game3.png" alt="Sample 3" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Video & Image Editing -->
+      <div class="service-card reveal reveal-delay-3"
+           data-service="Video & Image Editing"
+           data-desc="I'll edit your photos and videos to look polished, cinematic, and ready for any platform."
+           onclick="openContact(this)">
+        <div class="service-img-wrap">
+          <img src="services/imgvid.png" alt="Video & Image Editing"
+               onerror="this.parentElement.classList.add('img-fallback')" />
+          <div class="service-img-overlay">
+            <span class="service-cta-hint"><i class="fa-solid fa-hand-pointer"></i> Hire me for this</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fa-solid fa-film"></i></div>
+          <h3>Video &amp; Image Editing</h3>
+          <p>Cinematic video edits and polished photo retouching — color grading, transitions, effects, and more using CapCut, Filmora, and Lightroom.</p>
+          <div class="service-tags">
+            <span>CapCut</span><span>Filmora</span><span>Lightroom</span><span>Picsart</span>
+          </div>
+        <div class="samples-label"><i class="fa-solid fa-images"></i> Work Samples</div>
+        <div class="samples-grid">
+          <div class="sample-thumb" onclick="openLightbox(event, 'video1.png')"><img src="samples/video1.png" alt="Sample 1" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'video2.png')"><img src="samples/video2.png" alt="Sample 2" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'video3.png')"><img src="samples/video3.png" alt="Sample 3" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+        </div>
+        </div>
+      </div>
+
+      <!-- Project Manager -->
+      <div class="service-card reveal reveal-delay-1"
+           data-service="Project Management"
+           data-desc="I'll help plan, organize, and drive your project from kickoff to delivery — keeping teams aligned, timelines on track, and goals in focus."
+           onclick="openContact(this)">
+        <div class="service-img-wrap">
+          <img src="services/projman.png" alt="Project Management"
+               onerror="this.parentElement.classList.add('img-fallback')" />
+          <div class="service-img-overlay">
+            <span class="service-cta-hint"><i class="fa-solid fa-hand-pointer"></i> Hire me for this</span>
+          </div>
+        </div>
+        <div class="service-body">
+          <div class="service-icon"><i class="fa-solid fa-diagram-project"></i></div>
+          <h3>Project Management</h3>
+          <p>Organizing teams, tracking milestones, and keeping projects running smoothly from planning to launch — with clear communication and structured workflows.</p>
+          <div class="service-tags">
+            <span>Planning</span><span>Coordination</span><span>Notion</span><span>Agile</span>
+          </div>
+        <div class="samples-label"><i class="fa-solid fa-images"></i> Work Samples</div>
+        <div class="samples-grid">
+          <div class="sample-thumb" onclick="openLightbox(event, 'samples/pm1.png')"><img src="samples/pm1.png" alt="Sample 1" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'samples/pm2.png')"><img src="samples/pm2.png" alt="Sample 2" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+          <div class="sample-thumb" onclick="openLightbox(event, 'samples/pm3.png')"><img src="samples/pm3.png" alt="Sample 3" onerror="this.parentElement.style.display='none'" /><div class="sample-thumb-hover"><i class="fa-solid fa-magnifying-glass-plus"></i></div></div>
+        </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     SKILLS DEEP DIVE
+============================================= -->
+<section id="mam-skills">
+  <div class="section-inner">
+    <h2 class="section-title reveal">My Toolkit</h2>
+    <div class="section-divider reveal"></div>
+
+    <div class="toolkit-grid">
+      <div class="toolkit-col reveal reveal-delay-1">
+        <h4><i class="fa-solid fa-layer-group"></i> Design</h4>
+        <div class="skill-bar-list">
+          <div class="skill-bar-item"><span>Figma</span><div class="bar"><div class="bar-fill" data-w="90"></div></div></div>
+          <div class="skill-bar-item"><span>Canva</span><div class="bar"><div class="bar-fill" data-w="95"></div></div></div>
+          <div class="skill-bar-item"><span>Picsart</span><div class="bar"><div class="bar-fill" data-w="88"></div></div></div>
+          <div class="skill-bar-item"><span>Lightroom</span><div class="bar"><div class="bar-fill" data-w="80"></div></div></div>
+        </div>
+      </div>
+      <div class="toolkit-col reveal reveal-delay-2">
+        <h4><i class="fa-solid fa-terminal"></i> Development</h4>
+        <div class="skill-bar-list">
+          <div class="skill-bar-item"><span>HTML/CSS</span><div class="bar"><div class="bar-fill" data-w="92"></div></div></div>
+          <div class="skill-bar-item"><span>JavaScript</span><div class="bar"><div class="bar-fill" data-w="78"></div></div></div>
+          <div class="skill-bar-item"><span>Python</span><div class="bar"><div class="bar-fill" data-w="75"></div></div></div>
+          <div class="skill-bar-item"><span>Flutter/Dart</span><div class="bar"><div class="bar-fill" data-w="72"></div></div></div>
+          <div class="skill-bar-item"><span>C++</span><div class="bar"><div class="bar-fill" data-w="70"></div></div></div>
+        </div>
+      </div>
+      <div class="toolkit-col reveal reveal-delay-3">
+        <h4><i class="fa-solid fa-video"></i> Media</h4>
+        <div class="skill-bar-list">
+          <div class="skill-bar-item"><span>CapCut</span><div class="bar"><div class="bar-fill" data-w="90"></div></div></div>
+          <div class="skill-bar-item"><span>Filmora</span><div class="bar"><div class="bar-fill" data-w="85"></div></div></div>
+          <div class="skill-bar-item"><span>Snapseed</span><div class="bar"><div class="bar-fill" data-w="88"></div></div></div>
+          <div class="skill-bar-item"><span>GameMaker</span><div class="bar"><div class="bar-fill" data-w="74"></div></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     FUN FACTS
+============================================= -->
+<section id="mam-facts">
+  <div class="section-inner">
+    <h2 class="section-title reveal">Fun Facts</h2>
+    <div class="section-divider reveal"></div>
+    <div class="facts-grid">
+      <div class="fact-card reveal reveal-delay-1">
+        <span class="fact-emoji">🎮</span>
+        <h3>Gamer at Heart</h3>
+        <p>Mobile Legends main, always grinding ranked matches when not coding.</p>
+      </div>
+      <div class="fact-card reveal reveal-delay-2">
+        <span class="fact-emoji">🎨</span>
+        <h3>Design Before Coffee</h3>
+        <p>I open Figma before I even check my notifications. Layouts are therapeutic.</p>
+      </div>
+      <div class="fact-card reveal reveal-delay-3">
+        <span class="fact-emoji">🐱</span>
+        <h3>Cat Person</h3>
+        <p>My portfolio mascot isn't random — cats are my spirit animal and creative muse.</p>
+      </div>
+      <div class="fact-card reveal reveal-delay-1">
+        <span class="fact-emoji">🏋️</span>
+        <h3>Gym Regular</h3>
+        <p>I balance screen time with gym time. Discipline in fitness = discipline in code.</p>
+      </div>
+      <div class="fact-card reveal reveal-delay-2">
+        <span class="fact-emoji">📺</span>
+        <h3>Anime & Series Fan</h3>
+        <p>Watch anime and series on weekends. Storytelling inspires my design thinking.</p>
+      </div>
+      <div class="fact-card reveal reveal-delay-3">
+        <span class="fact-emoji">🚀</span>
+        <h3>Always Learning</h3>
+        <p>Attended PyCon APAC, hackathons, and conferences to stay at the edge of tech.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =============================================
+     CTA STRIP
+============================================= -->
+<section id="mam-cta">
+  <div class="cta-inner reveal">
+    <h2>Ready to build something <span>amazing?</span></h2>
+    <p>I'm open for freelance projects, collaborations, and internships. Let's connect!</p>
+    <button class="btn btn-primary cta-big" onclick="openContactDirect()">
+      <i class="fa-solid fa-paper-plane"></i> Let's Work Together
+    </button>
+  </div>
+</section>
+
+<!-- =============================================
+     FOOTER
+============================================= -->
+<footer>
+  <div class="footer-socials">
+    <a href="https://www.facebook.com/Jade.Ricafort6/" class="social-icon" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://www.linkedin.com/in/rosella-jade-asetre-ricafort-169676296/" class="social-icon" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com/jadiellarose" class="social-icon" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    <a href="https://www.tiktok.com/@strikersmileyjade" class="social-icon" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+    <a href="https://discord.com/users/viperjaderose" class="social-icon" target="_blank" rel="noopener" aria-label="Discord"><i class="fab fa-discord"></i></a>
+    <a href="https://github.com/viperestjade" class="social-icon" target="_blank" rel="noopener" aria-label="Github"><i class="fab fa-github"></i></a>
+  </div>
+  <p>Made with <span style="color:var(--peach);">♥</span> by Jadiellarose &nbsp;·&nbsp; © <span id="year"></span> All rights reserved</p>
+</footer>
+
+<!-- =============================================
+     CONTACT / SERVICE MODAL
+============================================= -->
+<div class="modal-overlay" id="contactModal" onclick="closeModalOutside(event)">
+  <div class="modal-box contact-modal-box">
+    <button class="modal-close" onclick="closeContact()"><i class="fa-solid fa-xmark"></i></button>
+
+    <div class="modal-top">
+      <div class="modal-icon-big" id="modalIconBig">🎨</div>
+      <div class="modal-top-text">
+        <p class="modal-tag">Interested in a service?</p>
+        <h2 id="modalServiceTitle">UI/UX Design</h2>
+        <p id="modalServiceDesc" class="modal-service-desc">I'll craft clean, intuitive interfaces...</p>
+      </div>
+    </div>
+
+    <div class="modal-divider"></div>
+
+    <p class="modal-reach">Reach out through any of these:</p>
+
+    <div class="contact-options">
+      <a href="https://m.me/Jade.Ricafort6" target="_blank" rel="noopener" class="contact-option messenger">
+        <div class="co-icon"><i class="fab fa-facebook-messenger"></i></div>
+        <div class="co-text">
+          <span class="co-label">Messenger</span>
+          <span class="co-value">Jade.Ricafort6</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square co-arrow"></i>
+      </a>
+
+      <a href="mailto:ricafortjade@gmail.com" class="contact-option email">
+        <div class="co-icon"><i class="fa-regular fa-envelope"></i></div>
+        <div class="co-text">
+          <span class="co-label">Email</span>
+          <span class="co-value">ricafortjade@gmail.com</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square co-arrow"></i>
+      </a>
+
+      <a href="https://instagram.com/jadiellarose" target="_blank" rel="noopener" class="contact-option instagram">
+        <div class="co-icon"><i class="fab fa-instagram"></i></div>
+        <div class="co-text">
+          <span class="co-label">Instagram</span>
+          <span class="co-value">@jadiellarose</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square co-arrow"></i>
+      </a>
+
+      <a href="https://www.linkedin.com/in/rosella-jade-asetre-ricafort-169676296/" target="_blank" rel="noopener" class="contact-option linkedin">
+        <div class="co-icon"><i class="fab fa-linkedin-in"></i></div>
+        <div class="co-text">
+          <span class="co-label">LinkedIn</span>
+          <span class="co-value">Rosella Jade Ricafort</span>
+        </div>
+        <i class="fa-solid fa-arrow-up-right-from-square co-arrow"></i>
+      </a>
+    </div>
+
+    <div class="modal-footer-note">
+      <i class="fa-solid fa-circle-info"></i>
+      I typically respond within 24 hours. Can't wait to hear from you!
+    </div>
+  </div>
+</div>
+
+<button id="scrollTop" aria-label="Scroll to top">
+  <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button>
+  <img id="lightboxImg" src="" alt="Sample" />
+</div>
+<script src="MAM.js"></script>
+</body>
+</html>
