@@ -45,33 +45,50 @@ document.querySelectorAll('#home .reveal').forEach(el => el.classList.add('visib
 
 
 // -----------------------------------------------
-// 4. RESUME DOWNLOAD MODAL
+// 4. RESUME DOWNLOAD MODAL (SAFE FIX)
 // -----------------------------------------------
-const resumeBtn     = document.getElementById('resumeBtn');
+const resumeBtn = document.getElementById('resumeBtn');
 const downloadModal = document.getElementById('downloadModal');
-const modalCancel   = document.getElementById('modalCancel');
-const modalConfirm  = document.getElementById('modalConfirm');
-const resumeLink    = document.getElementById('resumeDownloadLink');
+const modalCancel = document.getElementById('modalCancel');
+const modalConfirm = document.getElementById('modalConfirm');
+const resumeLink = document.getElementById('resumeDownloadLink');
+const cvLink = document.getElementById('cvDownloadLink');
 
-resumeBtn.addEventListener('click', () => {
-  downloadModal.classList.add('active');
-  document.body.style.overflow = 'hidden';
-});
-modalCancel.addEventListener('click', closeModal);
-downloadModal.addEventListener('click', (e) => {
-  if (e.target === downloadModal) closeModal();
-});
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeModal();
-});
-modalConfirm.addEventListener('click', () => {
-  resumeLink.click();
-  closeModal();
-});
 function closeModal() {
+  if (!downloadModal) return;
   downloadModal.classList.remove('active');
   document.body.style.overflow = '';
 }
+
+if (resumeBtn && downloadModal) {
+  resumeBtn.addEventListener('click', () => {
+    downloadModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+}
+
+if (modalCancel) {
+  modalCancel.addEventListener('click', closeModal);
+}
+
+if (downloadModal) {
+  downloadModal.addEventListener('click', (e) => {
+    if (e.target === downloadModal) closeModal();
+  });
+}
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') closeModal();
+});
+
+if (modalConfirm) {
+  modalConfirm.addEventListener('click', () => {
+    if (resumeLink) resumeLink.click();
+    if (cvLink) setTimeout(() => cvLink.click(), 300);
+    closeModal();
+  });
+}
+
 
 
 // -----------------------------------------------
