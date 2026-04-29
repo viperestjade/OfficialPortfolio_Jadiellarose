@@ -1403,6 +1403,13 @@ body.dark footer .social-icon {
 }
 .btn-ghost:hover { background: var(--warm); border-color: var(--peach); }
 
+.modal-actions {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
 /* =============================================
    SCROLL-TO-TOP BUTTON
 ============================================= */
