@@ -45,14 +45,15 @@ document.querySelectorAll('#home .reveal').forEach(el => el.classList.add('visib
 
 
 // -----------------------------------------------
-// 4. RESUME DOWNLOAD MODAL (SAFE FIX)
+// 4. RESUME DOWNLOAD MODAL
 // -----------------------------------------------
-const resumeBtn = document.getElementById('resumeBtn');
-const downloadModal = document.getElementById('downloadModal');
-const modalCancel = document.getElementById('modalCancel');
-const modalConfirm = document.getElementById('modalConfirm');
-const resumeLink = document.getElementById('resumeDownloadLink');
-const cvLink = document.getElementById('cvDownloadLink');
+const resumeBtn          = document.getElementById('resumeBtn');
+const downloadModal      = document.getElementById('downloadModal');
+const modalCancel        = document.getElementById('modalCancel');
+const downloadResumeBtn  = document.getElementById('downloadResumeBtn');
+const downloadCvBtn      = document.getElementById('downloadCvBtn');
+const resumeLink         = document.getElementById('resumeDownloadLink');
+const cvLink             = document.getElementById('cvDownloadLink');
 
 function closeModal() {
   if (!downloadModal) return;
@@ -81,14 +82,19 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') closeModal();
 });
 
-if (modalConfirm) {
-  modalConfirm.addEventListener('click', () => {
+if (downloadResumeBtn) {
+  downloadResumeBtn.addEventListener('click', () => {
     if (resumeLink) resumeLink.click();
-    if (cvLink) setTimeout(() => cvLink.click(), 300);
     closeModal();
   });
 }
 
+if (downloadCvBtn) {
+  downloadCvBtn.addEventListener('click', () => {
+    if (cvLink) cvLink.click();
+    closeModal();
+  });
+}
 
 
 // -----------------------------------------------
