@@ -715,13 +715,16 @@
 <div class="modal-overlay" id="downloadModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
   <div class="modal-box">
     <div class="modal-icon">📄</div>
-    <h2 id="modalTitle">Download Resume and CV?</h2>
-    <p>Would you like to download these files to your device?</p>
-    
+    <h2 id="modalTitle">Download Documents</h2>
+    <p>Choose which document you'd like to download.</p>
+
     <div class="modal-actions">
       <button class="btn btn-ghost" id="modalCancel">Cancel</button>
-      <button class="btn btn-primary" id="modalConfirm">
-        <i class="fa-solid fa-download"></i> Download
+      <button class="btn btn-outline" id="downloadResumeBtn">
+        <i class="fa-solid fa-file-lines"></i> Resume
+      </button>
+      <button class="btn btn-primary" id="downloadCvBtn">
+        <i class="fa-solid fa-download"></i> Full CV
       </button>
     </div>
   </div>
@@ -732,7 +735,6 @@
    href="Rosella Jade Asetre Ricafort - Resume.pdf"
    download="Jade_Resume.pdf"
    style="display:none;"></a>
-
 <a id="cvDownloadLink"
    href="Rosella Jade Asetre Ricafort - Curriculum Vitae.pdf"
    download="Jade_CV.pdf"
